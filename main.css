@@ -106,6 +106,8 @@ label {
 .btn-primary {
     /*background: #1c91cc;*/
     background: #1982b6;
+    font-size: 1.3em;
+    height: 3em;
 }
 
 .content-container {
