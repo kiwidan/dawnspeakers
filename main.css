@@ -20,6 +20,7 @@ p {
     line-height: 1.8em;
     margin-top: 8px;
     font-size: 1.25em;
+    font-weight: 300
 }
 
 form {
@@ -61,10 +62,6 @@ ul {
 
 .map {
     border-radius: 4px;
-}
-
-.underline {
-    text-decoration: underline;
 }
 
 h2 {
