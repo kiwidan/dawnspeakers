@@ -2259,7 +2259,7 @@ h4 {
 
 .section {
   padding: 15px 0 45px; }
-  .section:nth-child(even) {
+  .section:nth-child(odd) {
     background: #eeeeee; }
 
 form .btn-block {

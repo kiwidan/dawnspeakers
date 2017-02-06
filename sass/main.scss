@@ -124,12 +124,8 @@ h4 {
 .section {
     padding: 15px 0 45px;
 
-    &:nth-child(even) {
+    &:nth-child(odd) {
         background: $gray-lighter;
-    }
-
-    &:last-child {
-        // padding-bottom: 15px;
     }
 }
 
