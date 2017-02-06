@@ -1,9 +1,6 @@
 /**
  * Variables
  */
-$red: #b61919;
-
-// $font-family-sans-serif: 'Lato', sans-serif;
 $font-family-sans-serif: 'Merriweather', serif;
 $brand-primary: #b61919;
 $brand-success: #19b668;
@@ -26,8 +23,6 @@ $navbar-height: 70px;
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navs";
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navbar";
 
 // Components
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
@@ -37,17 +32,6 @@ $navbar-height: 70px;
 /**
  * Styles
  */
-.navbar {
-    // background: $red;
-    background: white;
-    border-bottom: 4px solid darken($red, 0%);
-    color: white;
-    box-shadow: 2px 0 10px 2px $gray;
-}
-
-body {
-    padding-top: $navbar-height;
-}
 
 header {
     width: 80%;
@@ -61,6 +45,7 @@ header {
     background-size: cover;
     color: white;
     border-bottom: 8px solid $gray-light;
+    border-top: 8px solid $brand-primary;
 }
 
 h3 {
@@ -114,7 +99,7 @@ ul {
     padding: 0;
 
     &.fa-ul i {
-        color: $red;
+        color: $brand-primary;
         line-height: 1.4em;
         font-size: 1.3em;
         left: -2em;
@@ -129,7 +114,7 @@ h2 {
     text-align: center;
     margin: 20px 15px 30px;
     font-weight: bold;
-    color: $red;
+    color: $brand-primary;
 }
 
 h4 {
