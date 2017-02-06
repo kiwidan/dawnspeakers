@@ -2230,8 +2230,12 @@ form {
   border-radius: 4px; }
 
 ul {
-  list-style-type: none;
   padding: 0; }
+  ul.fa-ul i {
+    color: #b61919;
+    line-height: 1.4em;
+    font-size: 1.3em;
+    left: -2em; }
 
 .map {
   border-radius: 4px; }

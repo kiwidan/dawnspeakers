@@ -87,8 +87,14 @@ form {
 }
 
 ul {
-    list-style-type: none;
     padding: 0;
+
+    &.fa-ul i {
+        color: $red;
+        line-height: 1.4em;
+        font-size: 1.3em;
+        left: -2em;
+    }
 }
 
 .map {
