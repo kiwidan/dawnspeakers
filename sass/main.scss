@@ -124,9 +124,16 @@ h4 {
     }
 }
 
-form .btn-block {
-    font-size: 1.3em;
-    height: 3em;
+form {
+    .btn-block {
+        font-size: 1.3em;
+        height: 3em;
+    }
+
+    textarea {
+        min-width: 100%;
+        max-width: 100%;
+    }
 }
 
 .copyright {
