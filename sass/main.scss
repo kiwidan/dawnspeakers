@@ -5,9 +5,7 @@ $font-family-sans-serif: 'Merriweather', serif;
 $brand-primary: #b61919;
 $brand-success: #19b668;
 $brand-info: #1968b6;
-$navbar-height: 70px;
-
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+$text-color: #222;
 
 /**
  * Import some of Bootstrap
@@ -43,7 +41,7 @@ header {
     background: url('../images/header_background.jpg') center center;
     background-size: cover;
     color: white;
-    border-bottom: 4px solid lighten($gray-light, 10%);
+    border-bottom: 3px solid $gray-dark;
     border-top: 8px solid $brand-primary;
 
     .brand {
@@ -88,23 +86,27 @@ header {
     }
 }
 
+h2 {
+    text-align: center;
+    margin: 20px 15px 30px;
+    font-weight: bold;
+    color: $brand-primary;
+}
+
 h3 {
     font-size: 1.6em;
+}
+
+h4 {
+    text-align: center;
 }
 
 p {
     line-height: 1.8em;
     margin-top: 8px;
     font-size: 1.15em;
-    font-weight: 300
-}
-
-form {
-    background: white;
-    padding: 15px;
-    border-radius: $border-radius-base;
-    border: 1px solid rgba(0, 0, 0, .5);
-    box-shadow: 0 0 1px 0 rgba(0, 0, 0, .35);
+    font-weight: 300;
+    color: $gray-dark;
 }
 
 .map {
@@ -129,17 +131,6 @@ ul {
     }
 }
 
-h2 {
-    text-align: center;
-    margin: 20px 15px 30px;
-    font-weight: bold;
-    color: $brand-primary;
-}
-
-h4 {
-    text-align: center;
-}
-
 .section {
     padding: 15px 0 45px;
 
@@ -149,6 +140,12 @@ h4 {
 }
 
 form {
+    background: white;
+    padding: 15px;
+    border-radius: $border-radius-base;
+    border: 1px solid rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, .35);
+
     .btn-block {
         font-size: 1.3em;
         height: 3em;
