@@ -45,6 +45,47 @@ header {
     color: white;
     border-bottom: 4px solid lighten($gray-light, 10%);
     border-top: 8px solid $brand-primary;
+
+    .brand {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, .6);
+    }
+
+    .brand h1 {
+        text-transform: uppercase;
+        font-size: 4em;
+        letter-spacing: .1em;
+        font-weight: bold;
+
+        @media (max-width: $screen-sm-min) {
+            font-size: 7vw;
+        }
+
+        @media (max-width: $screen-xs-min) {
+            font-size: 9vw;
+        }
+    }
+
+    .sub-title {
+        font-size: 1.8em;
+        font-weight: 300;
+
+        @media (max-width: $screen-sm-min) {
+            font-size: 3.5vw;
+        }
+
+        @media (max-width: $screen-xs-min) {
+            font-size: 4.5vw;
+        }
+    }
+
+    @media (max-width: $screen-sm-min) {
+        height: 250px;
+    }
 }
 
 h3 {
@@ -61,37 +102,20 @@ p {
 form {
     background: white;
     padding: 15px;
-    border-radius: 4px;
+    border-radius: $border-radius-base;
     border: 1px solid rgba(0, 0, 0, .5);
     box-shadow: 0 0 1px 0 rgba(0, 0, 0, .35);
 }
 
-.brand {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    text-align: center;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, .6);
-}
-
-.brand h1 {
-    text-transform: uppercase;
-    font-size: 4em;
-    letter-spacing: .1em;
-    font-weight: bold;
-}
-
-.sub-title {
-    font-size: 1.7em;
-    font-weight: 300;
+.map {
+    border-radius: $border-radius-base;
 }
 
 .map-border {
     padding: 4px;
     background: white;
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, .35);
-    border-radius: 4px;
+    border-radius: $border-radius-base;
 }
 
 ul {
@@ -103,10 +127,6 @@ ul {
         font-size: 1.3em;
         left: -2em;
     }
-}
-
-.map {
-    border-radius: 4px;
 }
 
 h2 {

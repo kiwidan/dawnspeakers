@@ -2195,6 +2195,36 @@ header {
   color: white;
   border-bottom: 4px solid #919191;
   border-top: 8px solid #b61919; }
+  header .brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6); }
+  header .brand h1 {
+    text-transform: uppercase;
+    font-size: 4em;
+    letter-spacing: .1em;
+    font-weight: bold; }
+    @media (max-width: 768px) {
+      header .brand h1 {
+        font-size: 7vw; } }
+    @media (max-width: 480px) {
+      header .brand h1 {
+        font-size: 9vw; } }
+  header .sub-title {
+    font-size: 1.8em;
+    font-weight: 300; }
+    @media (max-width: 768px) {
+      header .sub-title {
+        font-size: 3.5vw; } }
+    @media (max-width: 480px) {
+      header .sub-title {
+        font-size: 4.5vw; } }
+  @media (max-width: 768px) {
+    header {
+      height: 250px; } }
 
 h3 {
   font-size: 1.6em; }
@@ -2212,23 +2242,8 @@ form {
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.35); }
 
-.brand {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  text-align: center;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6); }
-
-.brand h1 {
-  text-transform: uppercase;
-  font-size: 4em;
-  letter-spacing: .1em;
-  font-weight: bold; }
-
-.sub-title {
-  font-size: 1.7em;
-  font-weight: 300; }
+.map {
+  border-radius: 4px; }
 
 .map-border {
   padding: 4px;
@@ -2243,9 +2258,6 @@ ul {
     line-height: 1.4em;
     font-size: 1.3em;
     left: -2em; }
-
-.map {
-  border-radius: 4px; }
 
 h2 {
   text-align: center;
