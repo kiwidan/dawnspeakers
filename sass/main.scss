@@ -112,15 +112,18 @@ h4 {
     &:nth-child(odd) {
         background: $gray-lighter;
     }
+
+    &:last-child {
+        // padding-bottom: 15px;
+    }
 }
 
-form {
-    label {
-        color: black;
-    }
+form .btn-block {
+    font-size: 1.3em;
+    height: 3em;
+}
 
-    .btn-block {
-        font-size: 1.3em;
-        height: 3em;
-    }
+.copyright {
+    margin-top: 45px;
+    margin-bottom: 0;
 }
