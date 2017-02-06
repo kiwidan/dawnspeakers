@@ -7,7 +7,8 @@ $red: #b61919;
 $font-family-sans-serif: 'Lato', sans-serif;
 $brand-primary: #b61919;
 $brand-success: #19b668;
-$brand-info:    #1968b6;
+$brand-info: #1968b6;
+$navbar-height: 70px;
 
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
@@ -25,6 +26,8 @@ $brand-info:    #1968b6;
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navs";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navbar";
 
 // Components
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
@@ -34,6 +37,18 @@ $brand-info:    #1968b6;
 /**
  * Styles
  */
+.navbar {
+    // background: $red;
+    background: white;
+    border-bottom: 4px solid darken($red, 0%);
+    color: white;
+    box-shadow: 2px 0 10px 2px $gray;
+}
+
+body {
+    padding-top: $navbar-height;
+}
+
 header {
     width: 80%;
     margin: 0 auto;
@@ -42,9 +57,10 @@ header {
     left: 0;
     width: 100%;
     height: 300px;
-    background: url('../images/footer_lodyas.png');
+    background: url('../images/background.jpg') center center;
     background-size: cover;
     color: white;
+    border-bottom: 8px solid $gray-light;
 }
 
 p {
@@ -63,7 +79,12 @@ form {
 }
 
 .brand {
-    border-left: 5px solid white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, .6);
 }
 
 .brand h1 {
@@ -71,7 +92,6 @@ form {
     font-size: 4em;
     letter-spacing: .1em;
     font-weight: bold;
-    text-shadow: 2px 2px 3px rgba(50,50,50,.35)
 }
 
 .sub-title {
@@ -115,7 +135,7 @@ h4 {
 .section {
     padding: 15px 0 45px;
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
         background: $gray-lighter;
     }
 
