@@ -3,8 +3,8 @@
  */
 $red: #b61919;
 
-@import url(https://fonts.googleapis.com/css?family=Lato);
-$font-family-sans-serif: 'Lato', sans-serif;
+// $font-family-sans-serif: 'Lato', sans-serif;
+$font-family-sans-serif: 'Merriweather', serif;
 $brand-primary: #b61919;
 $brand-success: #19b668;
 $brand-info: #1968b6;
@@ -63,10 +63,14 @@ header {
     border-bottom: 8px solid $gray-light;
 }
 
+h3 {
+    font-size: 1.6em;
+}
+
 p {
     line-height: 1.8em;
     margin-top: 8px;
-    font-size: 1.25em;
+    font-size: 1.15em;
     font-weight: 300
 }
 

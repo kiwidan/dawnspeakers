@@ -1,7 +1,6 @@
 /**
  * Variables
  */
-@import url(https://fonts.googleapis.com/css?family=Lato);
 /**
  * Import some of Bootstrap
  */
@@ -249,7 +248,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Merriweather", serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -2723,10 +2722,13 @@ header {
   color: white;
   border-bottom: 8px solid #777777; }
 
+h3 {
+  font-size: 1.6em; }
+
 p {
   line-height: 1.8em;
   margin-top: 8px;
-  font-size: 1.25em;
+  font-size: 1.15em;
   font-weight: 300; }
 
 form {
