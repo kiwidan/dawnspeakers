@@ -1,17 +1,24 @@
 /**
- * Variables
+ * Import some of Bootstrap
  */
-$font-family-sans-serif: 'Merriweather', serif;
 $brand-primary: #b61919;
 $brand-success: #19b668;
 $brand-info: #1968b6;
-$text-color: #222;
 
-/**
- * Import some of Bootstrap
- */
+$font-size-base: 16px;
+$line-height-base: 1.8;
+
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+$font-family-serif: 'Merriweather', serif;
+$font-family-base: $font-family-serif;
+$text-color: $gray-darker;
+
+$navbar-default-brand-color: $brand-primary;
+$navbar-default-brand-hover-color: darken($brand-primary, 15%);
+
+
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/print";
 
@@ -21,6 +28,8 @@ $text-color: #222;
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navs";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navbar";
 
 // Components
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
@@ -30,6 +39,10 @@ $text-color: #222;
 /**
  * Styles
  */
+
+.body {
+    //line-height: 1.8em;
+}
 
 header {
     margin: 0 auto;
@@ -45,6 +58,7 @@ header {
     border-top: 8px solid $brand-primary;
 
     .brand {
+        font-family: 'Lato', sans-serif;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -102,9 +116,7 @@ h4 {
 }
 
 p {
-    line-height: 1.8em;
     margin-top: 8px;
-    font-size: 1.15em;
     font-weight: 300;
     color: $gray-dark;
 }
@@ -125,7 +137,7 @@ ul {
 
     &.fa-ul i {
         color: $brand-primary;
-        line-height: 1.4em;
+        line-height: 1.1em;
         font-size: 1.3em;
         left: -2em;
     }
@@ -137,6 +149,14 @@ ul {
     &:nth-child(odd) {
         background: $gray-lighter;
     }
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: $border-radius-base;
+    border: 1px solid rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, .35);
 }
 
 form {
