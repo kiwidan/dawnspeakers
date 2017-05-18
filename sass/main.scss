@@ -39,11 +39,6 @@ $navbar-default-brand-hover-color: darken($brand-primary, 15%);
 /**
  * Styles
  */
-
-.body {
-    //line-height: 1.8em;
-}
-
 header {
     margin: 0 auto;
     position: relative;
@@ -180,4 +175,10 @@ form {
 .copyright {
     margin-top: 45px;
     margin-bottom: 0;
+}
+
+.testimonial-container {
+    .card:not(.current-testimonial) {
+        display: none;
+    }
 }

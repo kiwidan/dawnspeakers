@@ -9,7 +9,7 @@
     <title>Dawnspeakers Dunedin</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700|Merriweather:300,400,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- Custom CSS -->
@@ -110,23 +110,24 @@
         <div class="container">
             <h2>Testimonials</h2>
 
-            <button class="btn btn-primary">Next</button>
+            <button class="btn btn-primary" disabled onclick="previousTestimonial()" id="previous-testimonial-button">< Previous</button>
+            <button class="btn btn-primary" onclick="nextTestimonial()" id="next-testimonial-button">Next ></button>
 
-            <div class="row">
-                <div class="col-md-12 card">
+            <div class="row testimonial-container" id="testimonial-container">
+                <div class="col-md-12 card current-testimonial" data-testimonial="1">
                     <h3>Dave</h3>
 
                     <p>I came from a family that avoided events that involved public speaking at all costs. After leaving university I soon realised that if I was to be successful I had to break that mould. When a friend mentioned one of his new year's resolutions was to improve his public speaking by joining toastmasters I agreed to go with him. That was 15 years ago and the club we joined was Dawnspeakers. In the intervening years Dawnspeakers has provided me with a safe supportive place to develop both my public speaking and leadership skills. The constructive feedback has highlighted the areas in which to put my energy and has resulted in my confidence increasing exponentially. I now feel at ease giving presentations, eulogies, chairing meetings ...etc.</p>
                     <p>Thanks Dawnspeakers</p>
                 </div>
 
-                <div class="col-md-12 card">
+                <div class="col-md-12 card" data-testimonial="2">
                     <h3>Stu</h3>
 
                     <p>Originally from Auckland, Stuart saw the light and moved to the deep south just over 20 years ago. After a brief stint living in Queenstown, Stuart moved to Dunedin. Says Stuart: "Hove Central Otago — who doesn't — but Dunedin gives you the best of both worlds with a vibrant small city, great beaches and the best of Central is just a couple of hours drive away." Stuart is a founding director of local project and construction management company Signal Management Group. Stuart again: "My work requires me to regularly speak to groups of people, some small, some large. Toastmasters has helped me improve my speaking ability tremendously and also taught me how to run meetings, especially ones with large groups of people." Stuart has been with Dawnspeakers for over 15 years and whilst with a smile he says he has become part of the furniture in the club, he says he loves helping people to improve their speaking. "Whilst we are there to practice and learn, we have a lot of fun along the way and l enjoy every meeting tremendously. It's always a great start to the day!" </p>
                 </div>
 
-                <div class="col-md-12 card">
+                <div class="col-md-12 card" data-testimonial="3">
                     <h3>Ben</h3>
 
                     <p>I came to Toastmasters originally because I had had a poor job interview, the feedback was that they were not confident 1 could present well to the board. I decided that I wouldn't miss opportunities again on the perceived belief that I was a poor public speaker. So I hunted down and found Toastmasters, and understood immediately that this was the place that would help me. In a short time 1 saw the dramatic improvements I made.</p>
@@ -192,6 +193,40 @@
             });
 
             return false;
+        }
+
+        function previousTestimonial() {
+            moveTestimonial('left');
+            return false;
+        }
+
+        function nextTestimonial() {
+            moveTestimonial('right')
+            return false;
+        }
+
+        function moveTestimonial(direction) {
+            const current = $('.current-testimonial');
+            const next = direction === 'right' ? current.next() : current.prev();
+
+            current.removeClass('current-testimonial');
+            next.addClass('current-testimonial');
+
+            const numTestimonials = $('.testimonial-container').siblings().length;
+            const testimonialNumber = next.data('testimonial');
+
+            if (testimonialNumber === 1) {
+                document.getElementById('next-testimonial-button').disabled = false;
+                document.getElementById('previous-testimonial-button').disabled = true;
+            }
+            else if (testimonialNumber === numTestimonials) {
+                document.getElementById('next-testimonial-button').disabled = true;
+                document.getElementById('previous-testimonial-button').disabled = false;
+            }
+            else {
+                document.getElementById('next-testimonial-button').disabled = false;
+                document.getElementById('previous-testimonial-button').disabled = false;
+            }
         }
     </script>
 </body>
