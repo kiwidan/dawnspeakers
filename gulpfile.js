@@ -4,7 +4,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var minifycss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 
-var cssDest = './css';
+var cssDest = './public/css';
 var sassSource = './sass/**/*.scss';
 
 gulp.task('styles', function() {
