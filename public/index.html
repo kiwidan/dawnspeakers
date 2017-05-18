@@ -206,26 +206,33 @@
         }
 
         function moveTestimonial(direction) {
+            // Get the current and next testimonial elements
             const current = $('.current-testimonial');
             const next = direction === 'right' ? current.next() : current.prev();
 
-            current.removeClass('current-testimonial');
-            next.addClass('current-testimonial');
-
-            const numTestimonials = $('.testimonial-container').siblings().length;
+            // Find the number of the current testimonial and the total number of testimonials
             const testimonialNumber = next.data('testimonial');
+            const numTestimonials = $('.testimonial-container').siblings().length;
 
-            if (testimonialNumber === 1) {
-                document.getElementById('next-testimonial-button').disabled = false;
-                document.getElementById('previous-testimonial-button').disabled = true;
-            }
-            else if (testimonialNumber === numTestimonials) {
-                document.getElementById('next-testimonial-button').disabled = true;
-                document.getElementById('previous-testimonial-button').disabled = false;
-            }
-            else {
-                document.getElementById('next-testimonial-button').disabled = false;
-                document.getElementById('previous-testimonial-button').disabled = false;
+            // If the testimonial number is undefined, there is no next element, so don't do anything
+            if (testimonialNumber !== undefined) {
+                // Hide the current testimonial and show the next one
+                current.removeClass('current-testimonial');
+                next.addClass('current-testimonial');
+
+                // Disabled/enable the appropiate prev/next buttons
+                if (testimonialNumber === 1) {
+                    document.getElementById('next-testimonial-button').disabled = false;
+                    document.getElementById('previous-testimonial-button').disabled = true;
+                }
+                else if (testimonialNumber === numTestimonials) {
+                    document.getElementById('next-testimonial-button').disabled = true;
+                    document.getElementById('previous-testimonial-button').disabled = false;
+                }
+                else {
+                    document.getElementById('next-testimonial-button').disabled = false;
+                    document.getElementById('previous-testimonial-button').disabled = false;
+                }
             }
         }
     </script>
