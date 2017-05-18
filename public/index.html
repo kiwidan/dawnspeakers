@@ -93,7 +93,7 @@
 
             <div class="row">
                 <div class="col-md-6">
-                    <p>7am on Tuesdays mornings at the Alexander McMillan Room first floor of Community House, 283 Moray Place, Dunedin.</p>
+                    <p>7am on Tuesday mornings at the Alexander McMillan Room first floor of Community House, 283 Moray Place, Dunedin.</p>
                 </div>
                 <div class="col-md-6">
                     <div class="map-border">
@@ -121,7 +121,7 @@
                 <div class="col-md-12 card" data-testimonial="2">
                     <h3>Stu</h3>
 
-                    <p>Originally from Auckland, Stuart saw the light and moved to the deep south just over 20 years ago. After a brief stint living in Queenstown, Stuart moved to Dunedin. Says Stuart: "Hove Central Otago — who doesn't — but Dunedin gives you the best of both worlds with a vibrant small city, great beaches and the best of Central is just a couple of hours drive away." Stuart is a founding director of local project and construction management company Signal Management Group. Stuart again: "My work requires me to regularly speak to groups of people, some small, some large. Toastmasters has helped me improve my speaking ability tremendously and also taught me how to run meetings, especially ones with large groups of people." Stuart has been with Dawnspeakers for over 15 years and whilst with a smile he says he has become part of the furniture in the club, he says he loves helping people to improve their speaking. "Whilst we are there to practice and learn, we have a lot of fun along the way and l enjoy every meeting tremendously. It's always a great start to the day!" </p>
+                    <p>Originally from Auckland, Stuart saw the light and moved to the deep south just over 20 years ago. After a brief stint living in Queenstown, Stuart moved to Dunedin. Says Stuart: "Love Central Otago — who doesn't — but Dunedin gives you the best of both worlds with a vibrant small city, great beaches and the best of Central is just a couple of hours drive away." Stuart is a founding director of local project and construction management company Signal Management Group. Stuart again: "My work requires me to regularly speak to groups of people, some small, some large. Toastmasters has helped me improve my speaking ability tremendously and also taught me how to run meetings, especially ones with large groups of people." Stuart has been with Dawnspeakers for over 15 years and whilst with a smile he says he has become part of the furniture in the club, he says he loves helping people to improve their speaking. "Whilst we are there to practice and learn, we have a lot of fun along the way and l enjoy every meeting tremendously. It's always a great start to the day!" </p>
                 </div>
 
                 <div class="col-md-12 card" data-testimonial="3">
@@ -182,15 +182,18 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
     <script type="text/javascript">
         function sendForm() {
+            const data = {
+                message: "hello!",
+                name: "Paddy Moran",
+                _replyto: "pdmoran@outlook.com"
+            };
+
              $.ajax({
                 url: "https://formspree.io/pdmoran@outlook.com",
                 method: "POST",
-                data: {message: "hello!", name: "Paddy Moran", _replyto: "pdmoran@outlook.com"},
+                data: data,
                 dataType: "json"
             });
 
