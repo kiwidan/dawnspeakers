@@ -141,7 +141,7 @@ ul {
 .section {
     padding: 15px 0 45px;
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
         background: $gray-lighter;
     }
 }
