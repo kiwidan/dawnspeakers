@@ -178,6 +178,8 @@ form {
 }
 
 .testimonial-container {
+    padding: 15px;
+
     .card:not(.current-testimonial) {
         display: none;
     }
