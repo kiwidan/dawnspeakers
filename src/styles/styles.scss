@@ -45,12 +45,12 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 300px;
+    height: 350px;
+    border-top: 8px solid $brand-primary;
     background: url('../images/header_background.jpg') center center;
     background-size: cover;
-    color: white;
-    border-bottom: 3px solid $gray-dark;
-    border-top: 8px solid $brand-primary;
+    background-color: hsla(0, 0%, 50%, 1);
+    background-blend-mode: multiply;
 
     .brand {
         font-family: 'Lato', sans-serif;
@@ -59,7 +59,6 @@ header {
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
         text-align: center;
-        text-shadow: 2px 2px 3px rgba(0, 0, 0, .6);
     }
 
     .brand h1 {
@@ -67,6 +66,7 @@ header {
         font-size: 4em;
         letter-spacing: .1em;
         font-weight: bold;
+        margin-bottom: 6px;
 
         @media (max-width: $screen-sm-min) {
             font-size: 7vw;
